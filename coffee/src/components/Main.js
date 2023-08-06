@@ -2,22 +2,22 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import MyNavbar from './MyNavbar';
+import header from './img/header.png'
 import './Main.scss';
 
 function Main() {
 
     useEffect(() => {
-        AOS.init(); // AOS'u başlatın
+        AOS.init();
     }, []);
 
     return (
         <>
             <MyNavbar/>
-            <FontAwesomeIcon className='mt-5 ms-5' icon={faCoffee} size="2xl"/>
-            <h1 className='mt-2 ms-5'>Coffee</h1>
+            <div className='header'>
+                <img alt='' src={header} width="100%"></img>
+            </div>
         </>
     )
 }
