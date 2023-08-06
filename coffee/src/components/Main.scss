@@ -1,13 +1,31 @@
-$background:#e1bc9e;
-$navbar:#181512;
-$footer:#181512;
+$background: #e1bc9e;
+$navbar: #181512;
+$footer: #181512;
+$navbar-footer-text: #f3d8c1;
+$dropdown: #493b2a;
 
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: $background;
+}
+
+.navbar {
+  background-color: $navbar;
+
+  .navbar-brand,
+  .nav-link {
+    color: $navbar-footer-text;
+  }
+
+  .dropdown-menu {
+    background-color: $dropdown;
+    .dropdown-item{
+      color: $navbar-footer-text;
+    }
+  }
 }
