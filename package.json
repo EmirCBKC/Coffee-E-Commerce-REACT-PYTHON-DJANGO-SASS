@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "coffee": "^5.5.0",
     "create-react-app": "^5.0.1"
   }
 }
