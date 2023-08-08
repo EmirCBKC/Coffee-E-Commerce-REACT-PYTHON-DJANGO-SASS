@@ -23,9 +23,10 @@ function Main() {
                 </video>
             </div>
 
-            <div className='content mt-5 d-flex flex-column justify-content-start align-items-center'>
+            <div className='content mt-5 mb-5 d-flex flex-column justify-content-start align-items-center'>
 
-                <div className='info row justify-content-around align-items-center'>
+                <div className='info mt-5 mb-5 row justify-content-around align-items-center'>
+                    <h1 className='text-center'>INFO</h1>
                     <div className='info-1 col-3'>
 
                     </div>
@@ -37,7 +38,8 @@ function Main() {
                     </div>
                 </div>
 
-                <div className='blog-up row justify-content-around align-items-center'>
+                <div className='blog-up mt-5 mb-5 row justify-content-around align-items-center'>
+                <h1 className='text-center'>BLOG-1</h1>
                     <div className='blog-up-1 col-5'>
 
                     </div>
@@ -46,7 +48,8 @@ function Main() {
                     </div>
                 </div>
 
-                <div className='blog-down row justify-content-around align-items-center'>
+                <div className='blog-down mt-5 mb-5 row justify-content-around align-items-center'>
+                <h1 className='text-center'>BLOG-2</h1>
                     <div className='blog-down-1 col-5'>
 
                     </div>
@@ -55,7 +58,8 @@ function Main() {
                     </div>
                 </div>
 
-                <div className='about row justify-content-around align-items-center'>
+                <div className='about mt-5 mb-5 row justify-content-around align-items-center'>
+                <h1 className='text-center'>ABOUT</h1>
                     <div className='about-1 col-3'>
 
                     </div>
@@ -67,10 +71,12 @@ function Main() {
                     </div>
                 </div>
 
+                <h1 className='text-center'>PRODUCTS</h1>
                 <div className='products row justify-content-around align-items-center'>
                 </div>
 
-                <div className='contact-us row justify-content-around align-items-center'>
+                <div className='contact-us mt-5 mb-5 row justify-content-around align-items-center'>
+                <h1 className='text-center'>CONTACT-US</h1>
                     <div className='form col-5'>
 
                     </div>
@@ -79,19 +85,22 @@ function Main() {
                     </div>
                 </div>
 
-                <div className='accordion-row row justify-content-around align-items-center'>
+                <div className='accordion-row mt-5 mb-5 row justify-content-around align-items-center'>
+                <h1 className='text-center'>ACCORDION</h1>
                     <div className='accordion col-5'>
 
                     </div>
                 </div>
 
-                <div className='partner-row row justify-content-around align-items-center'>
+                <div className='partner-row mt-5 mb-5 row justify-content-around align-items-center'>
+                <h1 className='text-center'>PARTNERSHIP</h1> 
                     <div className='partner col-5'>
 
                     </div>
                 </div>
 
             </div>
+            
             <MyFooter />
         </>
     )
