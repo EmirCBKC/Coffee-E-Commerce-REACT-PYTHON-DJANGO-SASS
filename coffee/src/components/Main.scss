@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Caveat:wght@400;700&family=Chakra+Petch&family=Cinzel&family=Indie+Flower&family=Kanit:wght@300&family=Lugrasimo&family=Merienda:wght@300&family=Pacifico&family=Rock+Salt&family=Yatra+One&display=swap');
 $background: linear-gradient(90deg, rgba(124, 95, 72, 1) 0%, rgba(225, 188, 158, 1) 50%, rgba(124, 95, 72, 1) 100%);
 $navbar-footer: #181512;
 $navbar-footer-text: #f3d8c1;
@@ -8,6 +9,8 @@ $card: #f3d8c1;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Merienda', cursive;
+  font-weight: 600;
 }
 
 body {
@@ -115,6 +118,16 @@ body {
     }
   }
 
+  .first-image {
+    width: 100%;
+    height: 50rem;
+    background-color: $card;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-image: url("./img/header-3.jpg");
+    background-position: bottom;
+    background-size: cover;
+  }
+
   .blog-up {
     width: 95%;
     height: 50rem;
@@ -130,22 +143,34 @@ body {
     .blog-up-2 {
       width: 45%;
       height: 90%;
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+      img {
+        filter: drop-shadow(16px 16px 40px $navbar-footer);
+      }
     }
   }
 
+  .second-image {
+    width: 100%;
+    height: 50rem;
+    background-color: $card;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-image: url("./img/header-1.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+
   .blog-down {
-    width: 95%;
+    width: 100%;
     height: 50rem;
 
     .blog-down-1 {
       height: 90%;
       width: 45%;
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+      img {
+        filter: drop-shadow(16px 16px 40px $navbar-footer);
+      }
     }
 
     .blog-down-2 {
@@ -155,6 +180,20 @@ body {
       border-radius: 30px;
       box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
+  }
+
+  .row {
+    --bs-gutter-x: 0;
+  }
+
+  .three-image {
+    width: 100%;
+    height: 50rem;
+    background-color: $card;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-image: url("./img/header-2.jpeg");
+    background-position: bottom;
+    background-size: cover;
   }
 
   .about {
@@ -184,6 +223,16 @@ body {
       border-radius: 30px;
       box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
+  }
+
+  .four-image {
+    width: 100%;
+    height: 50rem;
+    background-color: $card;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-image: url("./img/header-4.jpg");
+    background-position: center;
+    background-size: cover;
   }
 
   .products {
