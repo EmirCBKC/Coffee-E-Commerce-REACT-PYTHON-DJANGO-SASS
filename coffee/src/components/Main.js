@@ -6,6 +6,8 @@ import MyNavbar from './MyNavbar';
 import MyFooter from './MyFooter';
 import video from './video/video.mp4'
 import blogUpImage from './img/blog-up.png'
+import blogKapak from './img/kapak.png'
+import blogCup from './img/kapaksız.png'
 import blogDownImage from './img/blog-down.png'
 import './Main.scss';
 
@@ -20,7 +22,7 @@ function Main() {
             <MyNavbar />
 
             <div className='header'>
-                <video width="100%" height="1070px" autoPlay loop muted>
+                <video width="100%" height="100%" autoPlay loop muted>
                     <source src={video}></source>
                 </video>
             </div>
@@ -76,8 +78,11 @@ function Main() {
                             <p>Share the message of eco-consciousness with each cup, sparking conversations about responsible choices.</p>
                             <p>As you sip from these cups, you're savoring both flavor and a commitment to a healthier planet.</p>
                         </div>
-                        <div className='blog-up-2 d-flex justify-content-center align-items-center col-5'>
-                            <img alt='' src={blogUpImage} width="80%"></img>
+                        <div className='blog-up-2 d-flex flex-column justify-content-center align-items-center col-5'>
+                            <div className='cup d-flex flex-column justify-content-center align-items-center'>
+                                <img className='kapak' alt='' src={blogKapak} width="50%"></img>
+                                <img className='bardak' alt='' src={blogCup} width="70%"></img>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -85,7 +90,7 @@ function Main() {
                 <div className='second-image mt-5 mb-5 row justify-content-around align-items-center'>
                 </div>
 
-                <div className='d-flex justify-content-between'style={{width:"100%"}} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div className='d-flex justify-content-between' style={{ width: "100%" }} data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div className='blog-down mt-5 mb-5 row justify-content-between align-items-center'>
                         <h1 className='text-center'>COFFEE BEANS</h1>
                         <div className='blog-down-1 col-5'>
