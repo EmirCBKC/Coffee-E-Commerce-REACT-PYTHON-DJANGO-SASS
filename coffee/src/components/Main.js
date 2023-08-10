@@ -31,7 +31,7 @@ function Main() {
                 <div className='d-flex justify-content-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div className='info mt-5 mb-5 row justify-content-around align-items-center'>
                         <h1 className='text-center'>DISCOVER COFFEE</h1>
-                        <div className='info-1 col-3 p-5'>
+                        <div className='info-1 col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 p-5'>
                             <h2 className='text-center'>Coffee Varieties</h2>
                             <p>Explore a diverse range of coffee varieties, from bold and robust to mild and delicate.</p>
                             <p>Discover unique flavor profiles that cater to different preferences, making every sip an adventure.</p>
@@ -39,7 +39,7 @@ function Main() {
                             <p>Whether you enjoy a classic espresso or a flavored blend, our selection has something for everyone.</p>
                             <p>Indulge in the richness of single-origin coffees or the harmonious blends that tell a story in every cup.</p>
                         </div>
-                        <div className='info-2 col-3 p-5'>
+                        <div className='info-2 col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 p-5'>
                             <h2 className='text-center'>Coffee Origins</h2>
                             <p>Dive into the origins of coffee beans, tracing the unique flavors back to different regions worldwide.</p>
                             <p>Explore the distinct taste profiles influenced by altitude, climate, and soil conditions.</p>
@@ -47,7 +47,7 @@ function Main() {
                             <p>Each origin brings a tale of craftsmanship, connecting you to the passionate farmers and their lands.</p>
                             <p>From the highlands of Ethiopia to the plantations of Colombia, every bean carries the essence of its birthplace.</p>
                         </div>
-                        <div className='info-3 col-3 p-5'>
+                        <div className='info-3 col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 p-5'>
                             <h2 className='text-center'>Coffee Presentations</h2>
                             <p>Experience the art of coffee presentation, where every cup is a blend of taste and visual appeal.</p>
                             <p>Admire the intricate latte art that adorns your cappuccino, a testament to barista skills.</p>
@@ -64,7 +64,7 @@ function Main() {
                 <div className='d-flex justify-content-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <div className='blog-up mt-5 mb-5 row justify-content-around align-items-center'>
                         <h1 className='text-center'>COFFEE CUPS</h1>
-                        <div className='blog-up-1 p-5 col-5'>
+                        <div className='blog-up-1 p-5 col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12'>
                             <h2 className='text-center'>Eco-Friendly Choice</h2>
                             <p>Our special coffee cardboard cups are crafted from sustainable materials, reducing environmental impact.</p>
                             <p>Experience guilt-free sips while enjoying your favorite brews in cups designed with the planet in mind.</p>
@@ -77,7 +77,7 @@ function Main() {
                             <p>Share the message of eco-consciousness with each cup, sparking conversations about responsible choices.</p>
                             <p>As you sip from these cups, you're savoring both flavor and a commitment to a healthier planet.</p>
                         </div>
-                        <div className='blog-up-2 d-flex flex-column justify-content-center align-items-center col-5'>
+                        <div className='blog-up-2 d-flex flex-column justify-content-center align-items-center col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12'>
                             <div className='cup d-flex flex-column justify-content-center align-items-center'>
                                 <img className='kapak' alt='' src={blogKapak} width="50%"></img>
                                 <img className='bardak' alt='' src={blogCup} width="70%"></img>
