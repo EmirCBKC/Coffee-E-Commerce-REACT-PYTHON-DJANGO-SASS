@@ -5,7 +5,6 @@ import 'aos/dist/aos.css';
 import MyNavbar from './MyNavbar';
 import MyFooter from './MyFooter';
 import video from './video/video.mp4'
-import blogUpImage from './img/blog-up.png'
 import blogKapak from './img/kapak.png'
 import blogCup from './img/kapaksız.png'
 import blogDownImage from './img/blog-down.png'
