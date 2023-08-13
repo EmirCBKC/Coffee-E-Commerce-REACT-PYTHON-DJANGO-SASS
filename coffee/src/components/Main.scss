@@ -94,67 +94,88 @@ body {
 .content {
   width: 100%;
   height: auto;
-  
-  h1{
-    font-size: 80px;
+
+  h1 {
+    font-size: 300%;
   }
 
-  .info {
-    width: 95%;
-    p {
-      font-size: 85%;
-    }
-    
-
-    .info-1 {
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      overflow: auto;
-    }
-    .info-1:hover{
-      background-color: $dropdown;
-      color: $card;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    }
-
-    .info-2 {
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      overflow: auto;
-    }
-
-    .info-2:hover{
-      background-color: $dropdown;
-      color: $card;
-      transition:linear;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    }
-
-    .info-3 {
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      overflow: auto;
-    }
-
-    .info-3:hover{
-      background-color: $dropdown;
-      color: $card;
-      transition:linear;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    }
-  }
-
-  .first-image-row{
+//* ************************************* INFO-SCSS-START *****************************************
+  .background-info {
     width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-info.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #f3d8c1;
+    box-shadow: 0px 0px 20px 10px #f3d8c1;
+
+    .info {
+      width: 95%;
+
+      h1 {
+        color: #f3d8c1;
+        text-shadow: 1px 1px 5px #f3d8c1;
+      }
+
+      p {
+        font-size: 85%;
+      }
+
+      .info-1 {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        overflow: auto;
+      }
+
+      .info-1:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+
+      .info-2 {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        overflow: auto;
+      }
+
+      .info-2:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: linear;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+
+      .info-3 {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        overflow: auto;
+      }
+
+      .info-3:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: linear;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+    }
+
+  }
+
+//* ************************************* INFO-SCSS-END *****************************************
+
+  .first-image-row {
+    width: 100%;
+
     .first-image {
       width: 100%;
       height: 80vh;
@@ -168,48 +189,85 @@ body {
     }
   }
 
-  .blog-up {
-    width: 95%;
+//* ************************************* BLOG-UP-SCSS-START *****************************************
+  .background-blog-up {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-blog-up.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #f3d8c1;
+    box-shadow: 0px 0px 20px 10px #f3d8c1;
 
-    .blog-up-1 {
-      background-color: $card;
-      border-radius: 30px;
-      overflow: auto;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    }
+    .blog-up {
+      width: 95%;
 
-    .blog-up-2 {
-      .cup:hover{
-        .kapak{
-          transform: rotate(45deg);
-          margin-left: 7rem;
-          margin-bottom: 3rem;
-          transition: transform 0.3s ease-in-out;
-          z-index: 1000;
+      h1 {
+        color: #f3d8c1;
+        text-shadow: 1px 1px 5px #f3d8c1;
+      }
+
+      p {
+        font-size: 85%;
+      }
+
+      .blog-up-1 {
+        background-color: $card;
+        border-radius: 30px;
+        overflow: auto;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .blog-up-1:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+
+      .blog-up-2 {
+        .cup:hover {
+          .kapak {
+            transform: rotate(45deg);
+            margin-left: 7rem;
+            margin-bottom: 3rem;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+          }
+
+          .bardak {
+            animation: Bardak 3s infinite;
+          }
+
+          @keyframes Bardak {
+            0% {
+              filter: drop-shadow(0px -40px 5px rgba(65, 65, 65, 0.521));
+            }
+
+            50% {
+              filter: drop-shadow(0px -40px 5px rgba(154, 154, 154, 0.521));
+            }
+
+            100% {
+              filter: drop-shadow(0px -40px 5px rgba(65, 65, 65, 0.521));
+            }
+          }
         }
-        .bardak{
-          animation: Bardak 3s infinite;
-        }
-        @keyframes Bardak {
-          0%{
-            filter: drop-shadow(0px -40px 5px rgba(65, 65, 65, 0.521));
-          }
-          50%{
-            filter: drop-shadow(0px -40px 5px rgba(154, 154, 154, 0.521));
-          }
-          100%{
-            filter: drop-shadow(0px -40px 5px rgba(65, 65, 65, 0.521));
-          }
+
+        img {
+          filter: drop-shadow(16px 16px 40px $navbar-footer);
         }
       }
-      img {
-        filter: drop-shadow(16px 16px 40px $navbar-footer);
-      }
     }
+
   }
 
-  .second-image-row{
+//* ************************************* BLOG-UP-SCSS-END *****************************************
+
+  .second-image-row {
     width: 100%;
+
     .second-image {
       width: 100%;
       height: 80vh;
@@ -223,25 +281,56 @@ body {
     }
   }
 
-  .blog-down {
-    width: 95%;
-    .blog-down-1 {
+//* ************************************* BLOG-DOWN-SCSS-START *****************************************
+  .background-blog-down {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-blog-down.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #493b2a;
+    box-shadow: 0px 0px 20px 10px #f3d8c1;
 
-      img {
-        filter: drop-shadow(16px 16px 40px $navbar-footer);
+    .blog-down {
+      width: 95%;
+
+      h1 {
+        color: #f3d8c1;
+        text-shadow: 1px 1px 5px #f3d8c1;
       }
-    }
 
-    .blog-down-2 {
-      background-color: $card;
-      border-radius: 30px;
-      overflow: auto;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      p {
+        font-size: 85%;
+      }
+
+      .blog-down-1 {
+
+        img {
+          filter: drop-shadow(16px 16px 40px $navbar-footer);
+        }
+      }
+
+      .blog-down-2 {
+        background-color: $card;
+        border-radius: 30px;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .blog-down-2:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
     }
   }
 
-  .third-image-row{
+//* ************************************* BLOG-DOWN-SCSS-END *****************************************
+
+  .third-image-row {
     width: 100%;
+
     .third-image {
       width: 100%;
       height: 80vh;
@@ -255,33 +344,77 @@ body {
     }
   }
 
-  .about {
-    width: 95%;
+//* ************************************* ABOUT-US-SCSS-START *****************************************
+  .background-about-us {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-about-us.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #f3d8c1;
+    box-shadow: 0px 0px 20px 10px #181512;
 
-    .about-1 {
-      background-color: $card;
-      border-radius: 30px;
-      overflow: auto;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    }
+    .about {
+      width: 95%;
 
-    .about-2 {
-      background-color: $card;
-      border-radius: 30px;
-      overflow: auto;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    }
+      h1 {
+        color: #f3d8c1;
+        text-shadow: 1px 1px 5px #f3d8c1;
+      }
 
-    .about-3 {
-      background-color: $card;
-      border-radius: 30px;
-      overflow: auto;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      p {
+        font-size: 85%;
+      }
+
+      .about-1 {
+        background-color: $card;
+        border-radius: 30px;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .about-1:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+
+      .about-2 {
+        background-color: $card;
+        border-radius: 30px;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .about-2:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+
+      .about-3 {
+        background-color: $card;
+        border-radius: 30px;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .about-3:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
     }
   }
 
-  .four-image-row{
+//* ************************************* ABOUT-US-SCSS-END *****************************************
+
+  .four-image-row {
     width: 100%;
+
     .four-image {
       width: 100%;
       height: 80vh;
@@ -295,54 +428,155 @@ body {
     }
   }
 
-  .products {
-    width: 90%;
-    height: 50rem;
-    background-color: $card;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    border-radius: 30px;
-  }
+//* ************************************* PRODUCTS-SCSS-START *****************************************
+  .background-products {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
 
-  .contact-us {
-    width: 95%;
-
-    .form {
+    .products {
+      width: 90%;
+      height: 50rem;
       background-color: $card;
-      border-radius: 30px;
       box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    }
-
-    .map {
-      background-color: $card;
       border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
   }
 
-  .accordion-row {
-    width: 95%;
+//* ************************************* PRODUCTS-SCSS-END *****************************************
 
-    .accordion {
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+//* ************************************* CONTACT-US-SCSS-START *****************************************
+  .background-contact-us {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-contact-us.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #f3d8c1;
+    box-shadow: 0px 0px 20px 10px #f3d8c1;
+
+    h1 {
+      color: #f3d8c1;
+      text-shadow: 1px 1px 5px #f3d8c1;
+    }
+
+    p {
+      font-size: 85%;
+    }
+
+    .contact-us {
+      width: 95%;
+
+      .form {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .form:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+
+      .map {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .map:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
     }
   }
 
-  .partner-row {
-    width: 95%;
+//* ************************************* CONTACT-US-SCSS-END *****************************************
 
-    .partner {
-      background-color: $card;
-      border-radius: 30px;
-      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+//* ************************************* ACCORDION-SCSS-START *****************************************
+  .background-accordion {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-accordion.jpg");
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #f3d8c1;
+    box-shadow: 0px 0px 20px 10px #f3d8c1;
+
+    h1 {
+      color: #f3d8c1;
+      text-shadow: 1px 1px 5px #f3d8c1;
+    }
+
+    p {
+      font-size: 85%;
+    }
+
+    .accordion-row {
+      width: 95%;
+
+      .accordion {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .accordion:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
     }
   }
 
+//* ************************************* ACCORDION-SCSS-END *****************************************
+
+//* ************************************* PARTNER-SCSS-START *****************************************
+
+  .background-partner {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.650), rgba(0, 0, 0, 0.650)), url("./img/background-partner.jpg");
+    background-position: top;
+    background-size: cover;
+    border-bottom: 5px solid #f3d8c1;
+    box-shadow: 0px 0px 20px 10px #f3d8c1;
+
+    h1 {
+      color: #f3d8c1;
+      text-shadow: 1px 1px 5px #f3d8c1;
+    }
+
+    p {
+      font-size: 85%;
+    }
+
+    .partner-row {
+      width: 95%;
+
+      .partner {
+        background-color: $card;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      }
+
+      .partner:hover {
+        background-color: $dropdown;
+        color: $card;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+    }
+  }
+
+//* ************************************* PARTNER-SCSS-END *****************************************
 }
-
-
-
 //* ************************************* MAIN-SCSS-END *****************************************
 
 //? ************************************* FOOTER-SCSS-START *****************************************
