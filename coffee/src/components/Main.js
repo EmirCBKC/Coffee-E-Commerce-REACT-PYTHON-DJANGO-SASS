@@ -4,7 +4,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MyNavbar from './MyNavbar';
 import MyFooter from './MyFooter';
-import video from './video/video.mp4'
+import video_header from './video/header.mp4'
+import video_cup from './video/cup.mp4'
+import video_beans from './video/beans.mp4'
 import blogKapak from './img/kapak.png'
 import blogCup from './img/kapaksız.png'
 import blogDownImage from './img/blog-down.png'
@@ -22,7 +24,7 @@ function Main() {
 
             <div className='header mt-4'>
                 <video width="100%" height="100%" autoPlay loop muted>
-                    <source src={video}></source>
+                    <source src={video_header}></source>
                 </video>
             </div>
 
@@ -69,18 +71,19 @@ function Main() {
                     <div className='d-flex justify-content-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         <div className='blog-up mt-5 mb-5 p-5 row justify-content-around align-items-center'>
                             <h1 className='text-center'>COFFEE CUPS</h1>
-                            <div className='blog-up-1 mt-5 flex-column mb-5 p-5 col-xxl-5 col-xl-5 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
-                                <h2 className='text-center'>Eco-Friendly Choice</h2>
-                                <p>Our special coffee cardboard cups are crafted from sustainable materials, reducing environmental impact.</p>
-                                <p>Experience guilt-free sips while enjoying your favorite brews in cups designed with the planet in mind.</p>
-                                <p>These cups are fully biodegradable and compostable, making them a responsible choice for our ecosystem.</p>
-                                <p>By choosing our eco-friendly cups, you're contributing to a greener future and minimizing waste.</p>
-                                <p>Join the movement towards sustainability by embracing these cups as an alternative to traditional options.</p>
-                                <p>Feel good about your coffee habits knowing that your daily ritual supports environmentally conscious practices.</p>
-                                <p>Our commitment to sustainability extends from sourcing to production, ensuring a positive impact.</p>
-                                <p>Enjoy your drinks without compromising taste or quality while making a positive change.</p>
-                                <p>Share the message of eco-consciousness with each cup, sparking conversations about responsible choices.</p>
-                                <p>As you sip from these cups, you're savoring both flavor and a commitment to a healthier planet.</p>
+                            <div className='blog-up-1 mt-5 flex-column mb-5 p-5 col-xxl-7 col-xl-7 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
+                                <video width="100%" height="100%" autoPlay loop muted>
+                                    <source src={video_cup}></source>
+                                </video>
+                                <h2 className='text-center mt-5 mb-4'>Eco-Friendly Choice</h2>
+                                <p>Our special coffee cardboard cups are crafted from sustainable materials, reducing environmental impact.
+                                Experience guilt-free sips while enjoying your favorite brews in cups designed with the planet in mind.
+                                These cups are fully biodegradable and compostable, making them a responsible choice for our ecosystem.
+                                By choosing our eco-friendly cups, you're contributing to a greener future and minimizing waste.</p>
+                                <p>Join the movement towards sustainability by embracing these cups as an alternative to traditional options.
+                                Feel good about your coffee habits knowing that your daily ritual supports environmentally conscious practices.
+                                Our commitment to sustainability extends from sourcing to production, ensuring a positive impact.
+                                Enjoy your drinks without compromising taste or quality while making a positive change.</p>
                             </div>
                             <div className='blog-up-2 mt-5 mb-5 d-flex flex-column justify-content-center align-items-center col-xxl-5 col-xl-5 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
                                 <div className='cup d-flex flex-column justify-content-center align-items-center'>
@@ -105,18 +108,19 @@ function Main() {
                             <div className='blog-down-1 d-flex justify-content-center mt-5 mb-5 col-xxl-5 col-xl-5 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
                                 <img alt='' src={blogDownImage} width="70%"></img>
                             </div>
-                            <div className='blog-down-2 mt-5 mb-5 p-5 col-xxl-5 col-xl-5 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
-                                <h2 className='text-center'>From Farm to Cup</h2>
-                                <p>Embark on a journey through our coffee beans, from their origins to the final brewed cup.</p>
-                                <p>Our carefully selected beans hail from renowned coffee-growing regions across the globe.</p>
-                                <p>Explore diverse flavor profiles influenced by unique soil, climate, and altitude conditions.</p>
-                                <p>Whether from the Ethiopian highlands or the Colombian hills, each bean carries its origin's essence.</p>
-                                <p>Experience the world in every sip, as beans bring their terroir's taste to your coffee cup.</p>
-                                <p>Artisanally harvested and roasted, our beans undergo meticulous crafting to ensure excellence.</p>
-                                <p>Meticulous roasting techniques develop rich aromas and flavor profiles in each bean.</p>
-                                <p>Appreciate the journey from green to roasted as it brings out individual personalities and characters.</p>
-                                <p>Your cup of coffee, a testament to dedication, commitment, and passion at every step.</p>
-                                <p>Sip, savor, and embrace the journey as you enjoy both flavor and the story behind your cup.</p>
+                            <div className='blog-down-2 mt-5 mb-5 p-5 col-xxl-7 col-xl-7 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
+                            <video width="100%" height="100%" autoPlay loop muted>
+                                    <source src={video_beans}></source>
+                                </video>
+                                <h2 className='text-center mt-5 mb-4'>From Farm to Cup</h2>
+                                <p>Embark on a journey through our coffee beans, from their origins to the final brewed cup.
+                                Our carefully selected beans hail from renowned coffee-growing regions across the globe.
+                                Explore diverse flavor profiles influenced by unique soil, climate, and altitude conditions.
+                                Whether from the Ethiopian highlands or the Colombian hills, each bean carries its origin's essence.</p>
+                                <p>Experience the world in every sip, as beans bring their terroir's taste to your coffee cup.
+                                Artisanally harvested and roasted, our beans undergo meticulous crafting to ensure excellence.
+                                Meticulous roasting techniques develop rich aromas and flavor profiles in each bean.
+                                Appreciate the journey from green to roasted as it brings out individual personalities and characters.</p>
                             </div>
                         </div>
                     </div>

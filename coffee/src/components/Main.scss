@@ -43,9 +43,12 @@ body {
   }
 
   .navbar-brand,
-  .nav-link {
+  .nav-link,
+  .basket-btn,
+  .user-btn {
     color: $navbar-footer-text;
   }
+
 
   .dropdown-menu {
     background-color: $dropdown;
@@ -99,7 +102,7 @@ body {
     font-size: 300%;
   }
 
-//* ************************************* INFO-SCSS-START *****************************************
+  //* ************************************* INFO-SCSS-START *****************************************
   .background-info {
     width: 100%;
     height: auto;
@@ -171,7 +174,7 @@ body {
 
   }
 
-//* ************************************* INFO-SCSS-END *****************************************
+  //* ************************************* INFO-SCSS-END *****************************************
 
   .first-image-row {
     width: 100%;
@@ -189,7 +192,7 @@ body {
     }
   }
 
-//* ************************************* BLOG-UP-SCSS-START *****************************************
+  //* ************************************* BLOG-UP-SCSS-START *****************************************
   .background-blog-up {
     width: 100%;
     height: auto;
@@ -217,6 +220,11 @@ body {
         overflow: auto;
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        video {
+          border-radius: 30px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
       }
 
       .blog-up-1:hover {
@@ -224,6 +232,10 @@ body {
         color: $card;
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+        video {
+          box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
       }
 
       .blog-up-2 {
@@ -263,7 +275,7 @@ body {
 
   }
 
-//* ************************************* BLOG-UP-SCSS-END *****************************************
+  //* ************************************* BLOG-UP-SCSS-END *****************************************
 
   .second-image-row {
     width: 100%;
@@ -281,7 +293,7 @@ body {
     }
   }
 
-//* ************************************* BLOG-DOWN-SCSS-START *****************************************
+  //* ************************************* BLOG-DOWN-SCSS-START *****************************************
   .background-blog-down {
     width: 100%;
     height: auto;
@@ -315,6 +327,11 @@ body {
         border-radius: 30px;
         overflow: auto;
         box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        video {
+          border-radius: 30px;
+          box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
       }
 
       .blog-down-2:hover {
@@ -322,11 +339,15 @@ body {
         color: $card;
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+        video {
+          box-shadow: rgb(243, 216, 193) 2px 2px 30px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
       }
     }
   }
 
-//* ************************************* BLOG-DOWN-SCSS-END *****************************************
+  //* ************************************* BLOG-DOWN-SCSS-END *****************************************
 
   .third-image-row {
     width: 100%;
@@ -344,7 +365,7 @@ body {
     }
   }
 
-//* ************************************* ABOUT-US-SCSS-START *****************************************
+  //* ************************************* ABOUT-US-SCSS-START *****************************************
   .background-about-us {
     width: 100%;
     height: auto;
@@ -410,7 +431,7 @@ body {
     }
   }
 
-//* ************************************* ABOUT-US-SCSS-END *****************************************
+  //* ************************************* ABOUT-US-SCSS-END *****************************************
 
   .four-image-row {
     width: 100%;
@@ -428,7 +449,7 @@ body {
     }
   }
 
-//* ************************************* PRODUCTS-SCSS-START *****************************************
+  //* ************************************* PRODUCTS-SCSS-START *****************************************
   .background-products {
     width: 100%;
     height: auto;
@@ -444,9 +465,9 @@ body {
     }
   }
 
-//* ************************************* PRODUCTS-SCSS-END *****************************************
+  //* ************************************* PRODUCTS-SCSS-END *****************************************
 
-//* ************************************* CONTACT-US-SCSS-START *****************************************
+  //* ************************************* CONTACT-US-SCSS-START *****************************************
   .background-contact-us {
     width: 100%;
     height: auto;
@@ -496,9 +517,9 @@ body {
     }
   }
 
-//* ************************************* CONTACT-US-SCSS-END *****************************************
+  //* ************************************* CONTACT-US-SCSS-END *****************************************
 
-//* ************************************* ACCORDION-SCSS-START *****************************************
+  //* ************************************* ACCORDION-SCSS-START *****************************************
   .background-accordion {
     width: 100%;
     height: auto;
@@ -535,9 +556,9 @@ body {
     }
   }
 
-//* ************************************* ACCORDION-SCSS-END *****************************************
+  //* ************************************* ACCORDION-SCSS-END *****************************************
 
-//* ************************************* PARTNER-SCSS-START *****************************************
+  //* ************************************* PARTNER-SCSS-START *****************************************
 
   .background-partner {
     width: 100%;
@@ -575,8 +596,9 @@ body {
     }
   }
 
-//* ************************************* PARTNER-SCSS-END *****************************************
+  //* ************************************* PARTNER-SCSS-END *****************************************
 }
+
 //* ************************************* MAIN-SCSS-END *****************************************
 
 //? ************************************* FOOTER-SCSS-START *****************************************
