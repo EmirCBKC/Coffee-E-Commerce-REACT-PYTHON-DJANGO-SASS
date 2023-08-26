@@ -77,6 +77,93 @@ body {
     text-shadow: 1px 1px 10px $navbar-footer;
     border: 1px solid $card;
   }
+
+  .user-btn,
+  .basket-btn {
+    background: transparent;
+    border: none;
+  }
+
+  .request-info {
+    width: 35rem;
+    height: 0rem;
+    opacity: 0;
+    background-color: $dropdown;
+    border: 2px solid $card;
+    border-radius: 0px 0px 30px 30px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+    animation: RequestOpenAni 5s forwards;
+
+    .user-form{
+      width: 80%;
+      height: 100%;
+
+      label{
+        font-size: 35px;
+        color: $card;
+      }
+      input{
+        width: 55%;
+        height: 90%;
+        font-size: 30px;
+        color: $navbar-footer;
+        border-radius: 10px;
+      }
+
+      .request-btns{
+        width: 100%;
+        height: 70%;
+
+        .login-btn{
+          width: 25%;
+          height: 35%;
+          font-size: 20px;
+          border: 2px solid $navbar-footer-text;
+          border-radius: 10px;
+          background-color: $navbar-footer;
+          color: $navbar-footer-text;
+        }
+
+        .register-link{
+          width: 25%;
+          height: 35%;
+          font-size: 20px;
+          border: 2px solid $navbar-footer-text;
+          border-radius: 10px;
+          background-color: $navbar-footer;
+          color: $navbar-footer-text;
+        }
+      }
+
+      .login-btn:hover,.register-link:hover{
+        border-color: $navbar-footer;
+        background-color: $navbar-footer-text;
+        color: $navbar-footer;
+      }
+
+    }
+  }
+
+  @keyframes RequestOpenAni {
+    0% {
+      height: 0rem;
+      opacity: 0;
+    }
+  
+    50% {
+      height: 17rem;
+      opacity: 1;
+    }
+  
+    100% {
+      height: 17rem;
+      opacity: 1;
+    }
+  }
+
 }
 
 //? ************************************* NAVBAR-SCSS-END *****************************************
