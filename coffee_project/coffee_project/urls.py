@@ -18,12 +18,16 @@ from django.contrib import admin
 from django.urls import path,re_path,include
 from django.views.generic import TemplateView
 from rest_framework.routers import DefaultRouter
-from main_app.views import PostViewSet
+from main_app.views import *
 
 router = DefaultRouter()
 router.register(r'posts', PostViewSet)
+router.register(r'users', UserViewSet)
 urlpatterns = [
 	path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 	path('', include(router.urls)),
 	re_path(r'^.*', TemplateView.as_view(template_name='index.html'))
 ]
+
+router = DefaultRouter()

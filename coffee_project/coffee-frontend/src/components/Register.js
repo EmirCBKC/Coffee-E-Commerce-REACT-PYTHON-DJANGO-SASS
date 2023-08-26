@@ -1,37 +1,121 @@
+import axios from 'axios';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 function Register() {
+
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({
+        username: '',
+        email: '',
+        first_name: '',
+        last_name: '',
+        password: ''
+    });
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        // POST isteği için veri hazırla
+        const postData = {
+            username: formData.username,
+            email: formData.email,
+            first_name: formData.first_name,
+            last_name: formData.last_name,
+            password: formData.password
+        };
+
+        // Veriyi API'ye gönder
+        axios.post("http://127.0.0.1:8000/users/?format=json", postData)
+            .then(response => {
+                setFormData({
+                    username: '',
+                    email: '',
+                    first_name: '',
+                    last_name: '',
+                    password: ''
+                }); // Form verilerini sıfırla
+                navigate('/');
+                console.log('Registration successful:', response.data);
+                // İşlemler tamamlandıktan sonra giriş yapma veya başka bir yönlendirme yapabilirsiniz
+            })
+            .catch(error => {
+                console.error('Error during registration:', error);
+            });
+    };
+
     return (
         <>
-            <div className='background-info'>
-                    <div className='d-flex justify-content-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                        <div className='info mt-5 mb-5 p-5 row justify-content-around align-items-center'>
-                            <h1 className='text-center'>DISCOVER COFFEE</h1>
-                            <div className='info-1 mt-5 mb-5 col-xxl-3 col-xl-3 col-lg-8 col-md-10 col-sm-12 col-xs-12 p-5'>
-                                <h2 className='text-center'>Coffee Varieties</h2>
-                                <p>Explore a diverse range of coffee varieties, from bold and robust to mild and delicate.</p>
-                                <p>Discover unique flavor profiles that cater to different preferences, making every sip an adventure.</p>
-                                <p>Experience the intricate balance of acidity, body, and aroma in each carefully crafted cup.</p>
-                                <p>Whether you enjoy a classic espresso or a flavored blend, our selection has something for everyone.</p>
-                                <p>Indulge in the richness of single-origin coffees or the harmonious blends that tell a story in every cup.</p>
-                            </div>
-                            <div className='info-2 mt-5 mb-5 col-xxl-3 col-xl-3 col-lg-8 col-md-10 col-sm-12 col-xs-12 p-5'>
-                                <h2 className='text-center'>Coffee Origins</h2>
-                                <p>Dive into the origins of coffee beans, tracing the unique flavors back to different regions worldwide.</p>
-                                <p>Explore the distinct taste profiles influenced by altitude, climate, and soil conditions.</p>
-                                <p>Experience the fruity notes of African beans or the chocolaty undertones of South American ones.</p>
-                                <p>Each origin brings a tale of craftsmanship, connecting you to the passionate farmers and their lands.</p>
-                                <p>From the highlands of Ethiopia to the plantations of Colombia, every bean carries the essence of its birthplace.</p>
-                            </div>
-                            <div className='info-3 mt-5 mb-5 col-xxl-3 col-xl-3 col-lg-8 col-md-10 col-sm-12 col-xs-12 p-5'>
-                                <h2 className='text-center'>Coffee Presentations</h2>
-                                <p>Experience the art of coffee presentation, where every cup is a blend of taste and visual appeal.</p>
-                                <p>Admire the intricate latte art that adorns your cappuccino, a testament to barista skills.</p>
-                                <p>From the gentle pour-over method to the elegance of a French press, witness coffee-making as a performance.</p>
-                                <p>Enjoy the immersive experience of a coffee tasting, where aromas and flavors dance on your palate.</p>
-                                <p>Whether it's a simple morning ritual or a special occasion, our coffee presentations elevate the moment.</p>
+            <section className="h-100 bg-dark mt-5">
+                <div className="container py-5 h-100">
+                    <div className="row d-flex justify-content-center align-items-center h-100">
+                        <div className="col">
+                            <div className="card card-registration mt-4">
+                                <div className="row g-0">
+                                    <div className="col-xl-6 d-none d-xl-block">
+                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                                            alt="A woman enjoying a cup of coffee" className="img-fluid"
+                                            style={{ borderTopLeftRadius: '.25rem', borderBottomLeftRadius: '.25rem' }} />
+                                    </div>
+                                    <div className="col-xl-6">
+                                        <div className="card-body p-md-5 text-black">
+
+                                            <form className="register-form" onSubmit={handleSubmit}>
+                                                <div className="form-outline mb-4">
+                                                    <input type="text" id="username" name="username" className="form-control form-control-lg" />
+                                                    <label className="form-label" htmlFor="username">Username</label>
+                                                </div>
+
+                                                <div className="row">
+                                                    <div className="col-md-6 mb-4">
+                                                        <div className="form-outline">
+                                                            <input type="text" id="first_name" name="first_name" className="form-control form-control-lg" />
+                                                            <label className="form-label" htmlFor="first_name">First name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-6 mb-4">
+                                                        <div className="form-outline">
+                                                            <input type="text" id="last_name" name="last_name" className="form-control form-control-lg" />
+                                                            <label className="form-label" htmlFor="last_name">Last name</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="form-outline mb-4">
+                                                    <input type="email" id="email" name="email" className="form-control form-control-lg" />
+                                                    <label className="form-label" htmlFor="email">Email</label>
+                                                </div>
+
+                                                <div className="row">
+                                                    <div className="col-md-6 mb-4">
+                                                        <div className="form-outline">
+                                                            <input type="password" id="password" name="password" className="form-control form-control-lg" />
+                                                            <label className="form-label" htmlFor="password">Password</label>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-6 mb-4">
+                                                        <div className="form-outline">
+                                                            <input type="password" id="password2" name="password2" className="form-control form-control-lg" />
+                                                            <label className="form-label" htmlFor="password2">Password Confirm</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div className="d-flex justify-content-end pt-3">
+                                                    <button type="submit" className="btn btn-warning btn-lg ms-2">Submit form</button>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
         </>
     )
 }
