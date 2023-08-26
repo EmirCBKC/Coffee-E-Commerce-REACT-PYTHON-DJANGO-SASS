@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MyNavbar from './MyNavbar';
@@ -16,6 +17,19 @@ function Main() {
 
     useEffect(() => {
         AOS.init();
+    }, []);
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://127.0.0.1:8000/posts/?format=json")
+            .then(response => {
+                setPosts(response.data);
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
     }, []);
 
     return (
@@ -77,13 +91,13 @@ function Main() {
                                 </video>
                                 <h2 className='text-center mt-5 mb-4'>Eco-Friendly Choice</h2>
                                 <p>Our special coffee cardboard cups are crafted from sustainable materials, reducing environmental impact.
-                                Experience guilt-free sips while enjoying your favorite brews in cups designed with the planet in mind.
-                                These cups are fully biodegradable and compostable, making them a responsible choice for our ecosystem.
-                                By choosing our eco-friendly cups, you're contributing to a greener future and minimizing waste.</p>
+                                    Experience guilt-free sips while enjoying your favorite brews in cups designed with the planet in mind.
+                                    These cups are fully biodegradable and compostable, making them a responsible choice for our ecosystem.
+                                    By choosing our eco-friendly cups, you're contributing to a greener future and minimizing waste.</p>
                                 <p>Join the movement towards sustainability by embracing these cups as an alternative to traditional options.
-                                Feel good about your coffee habits knowing that your daily ritual supports environmentally conscious practices.
-                                Our commitment to sustainability extends from sourcing to production, ensuring a positive impact.
-                                Enjoy your drinks without compromising taste or quality while making a positive change.</p>
+                                    Feel good about your coffee habits knowing that your daily ritual supports environmentally conscious practices.
+                                    Our commitment to sustainability extends from sourcing to production, ensuring a positive impact.
+                                    Enjoy your drinks without compromising taste or quality while making a positive change.</p>
                             </div>
                             <div className='blog-up-2 mt-5 mb-5 d-flex flex-column justify-content-center align-items-center col-xxl-5 col-xl-5 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
                                 <div className='cup d-flex flex-column justify-content-center align-items-center'>
@@ -109,18 +123,18 @@ function Main() {
                                 <img alt='' src={blogDownImage} width="70%"></img>
                             </div>
                             <div className='blog-down-2 mt-5 mb-5 p-5 col-xxl-7 col-xl-7 col-lg-8 col-md-10 col-sm-12 col-xs-12'>
-                            <video width="100%" height="100%" autoPlay loop muted>
+                                <video width="100%" height="100%" autoPlay loop muted>
                                     <source src={video_beans}></source>
                                 </video>
                                 <h2 className='text-center mt-5 mb-4'>From Farm to Cup</h2>
                                 <p>Embark on a journey through our coffee beans, from their origins to the final brewed cup.
-                                Our carefully selected beans hail from renowned coffee-growing regions across the globe.
-                                Explore diverse flavor profiles influenced by unique soil, climate, and altitude conditions.
-                                Whether from the Ethiopian highlands or the Colombian hills, each bean carries its origin's essence.</p>
+                                    Our carefully selected beans hail from renowned coffee-growing regions across the globe.
+                                    Explore diverse flavor profiles influenced by unique soil, climate, and altitude conditions.
+                                    Whether from the Ethiopian highlands or the Colombian hills, each bean carries its origin's essence.</p>
                                 <p>Experience the world in every sip, as beans bring their terroir's taste to your coffee cup.
-                                Artisanally harvested and roasted, our beans undergo meticulous crafting to ensure excellence.
-                                Meticulous roasting techniques develop rich aromas and flavor profiles in each bean.
-                                Appreciate the journey from green to roasted as it brings out individual personalities and characters.</p>
+                                    Artisanally harvested and roasted, our beans undergo meticulous crafting to ensure excellence.
+                                    Meticulous roasting techniques develop rich aromas and flavor profiles in each bean.
+                                    Appreciate the journey from green to roasted as it brings out individual personalities and characters.</p>
                             </div>
                         </div>
                     </div>
@@ -168,6 +182,17 @@ function Main() {
                     <div className='d-flex justify-content-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         <div className='products mt-5 mb-5 row justify-content-around align-items-center'>
                             <h1 className='text-center'>PRODUCTS</h1>
+                            <div>
+                                <h1>Posts</h1>
+                                <ul>
+                                    {posts.map(post => (
+                                        <div key={post.id}>
+                                            <li >{post.postDesc}</li>
+                                            <li >{post.title}</li>
+                                        </div>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
