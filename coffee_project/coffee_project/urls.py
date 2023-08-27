@@ -23,6 +23,7 @@ from main_app.views import *
 router = DefaultRouter()
 router.register(r'posts', PostViewSet)
 router.register(r'users', UserViewSet)
+router.register(r'products', ProductViewSet)
 urlpatterns = [
 	path('admin/', admin.site.urls),
     path('api/', include(router.urls)),

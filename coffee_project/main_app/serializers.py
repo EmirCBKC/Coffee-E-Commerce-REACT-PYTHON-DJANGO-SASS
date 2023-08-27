@@ -1,11 +1,16 @@
 from rest_framework import serializers
-from .models import Post  # Varsa diğer modelleri de burada içe aktarabilirsiniz
+from .models import *  # Varsa diğer modelleri de burada içe aktarabilirsiniz
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
 
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
+        fields = '__all__'
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
         fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):

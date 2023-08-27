@@ -3,15 +3,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import MyNavbar from './MyNavbar';
-import MyFooter from './MyFooter';
 import video_header from './video/header.mp4'
 import video_cup from './video/cup.mp4'
 import video_beans from './video/beans.mp4'
 import blogKapak from './img/kapak.png'
 import blogCup from './img/kapaksız.png'
 import blogDownImage from './img/blog-down.png'
-import { Route, Routes } from 'react-router-dom';
 import './Main.scss';
 
 function Home() {
@@ -20,18 +17,17 @@ function Home() {
         AOS.init();
     }, []);
 
-    // const [posts, setPosts] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    // useEffect(() => {
-    //     axios.get("http://127.0.0.1:8000/posts/?format=json")
-    //         .then(response => {
-    //             setPosts(response.data);
-    //             console.log(response.data);
-    //         })
-    //         .catch(error => {
-    //             console.error('Error fetching data:', error);
-    //         });
-    // }, []);
+    useEffect(() => {
+        axios.get("http://127.0.0.1:8000/products/?format=json")
+            .then(response => {
+                setProducts(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
 
     return (
         <>
@@ -40,6 +36,7 @@ function Home() {
                 <video width="100%" height="100%" autoPlay loop muted>
                     <source src={video_header}></source>
                 </video>
+                <img alt='' src='/product_img/espresso.png' width='500px' height='500px'></img>
             </div>
 
             <div className='content mb-5 d-flex flex-column justify-content-start align-items-center'>
@@ -180,19 +177,22 @@ function Home() {
 
                 <div className='background-products'>
                     <div className='d-flex justify-content-center' data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                        <div className='products mt-5 mb-5 row justify-content-around align-items-center'>
+                        <div className='products p-5 mt-5 mb-5 row justify-content-around align-items-center'>
                             <h1 className='text-center'>PRODUCTS</h1>
-                            {/* <div>
-                                <h1>Posts</h1>
+                            <div>
                                 <ul>
-                                    {posts.map(post => (
-                                        <div key={post.id}>
-                                            <li >{post.postDesc}</li>
-                                            <li >{post.title}</li>
-                                        </div>
-                                    ))}
+                                    <div className='product row p-3'>
+                                        {products.map(product => (
+                                            <div key={product.id} className="col-3 p-5 mt-2 mb-2">
+                                                <img alt='' src={product.Img} width='500px' height='500px' />
+                                                <h4 className='p-1'>{product.title}</h4>
+                                                <p className='p-1'>{product.Desc}</p>
+                                                <h5 className='p-1'>${product.Price}</h5>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </ul>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -246,8 +246,6 @@ function Home() {
                 </div>
 
             </div>
-
-            <MyFooter />
         </>
     )
 }
