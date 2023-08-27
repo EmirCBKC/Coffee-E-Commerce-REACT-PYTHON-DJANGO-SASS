@@ -85,6 +85,7 @@ body {
   }
 
   .request-info {
+    display: block !important;
     width: 35rem;
     height: 0rem;
     opacity: 0;
@@ -97,15 +98,16 @@ body {
     z-index: 999;
     animation: RequestOpenAni 5s forwards;
 
-    .user-form{
+    .user-form {
       width: 80%;
       height: 100%;
 
-      label{
+      label {
         font-size: 35px;
         color: $card;
       }
-      input{
+
+      input {
         width: 55%;
         height: 90%;
         font-size: 30px;
@@ -113,11 +115,11 @@ body {
         border-radius: 10px;
       }
 
-      .request-btns{
+      .request-btns {
         width: 100%;
         height: 70%;
 
-        .login-btn{
+        .login-btn {
           width: 25%;
           height: 35%;
           font-size: 20px;
@@ -127,7 +129,7 @@ body {
           color: $navbar-footer-text;
         }
 
-        .register-link{
+        .register-link {
           width: 25%;
           height: 35%;
           font-size: 20px;
@@ -138,7 +140,8 @@ body {
         }
       }
 
-      .login-btn:hover,.register-link:hover{
+      .login-btn:hover,
+      .register-link:hover {
         border-color: $navbar-footer;
         background-color: $navbar-footer-text;
         color: $navbar-footer;
@@ -152,12 +155,12 @@ body {
       height: 0rem;
       opacity: 0;
     }
-  
+
     50% {
       height: 17rem;
       opacity: 1;
     }
-  
+
     100% {
       height: 17rem;
       opacity: 1;
@@ -690,13 +693,36 @@ body {
 
 //* ************************************* REGISTER-SCSS-START *****************************************
 
-.register-form{
-  input,button{
+.register-form {
+
+  input,
+  button {
     border: 2px solid black;
   }
 }
 
 //* ************************************* REGISTER-SCSS-END *****************************************
+
+//* ************************************* PROFILE-SCSS-START *****************************************
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
+}
+
+.profile-info{
+  input,button{
+    border: 2px solid black;
+  }
+}
+
+//* ************************************* PROFILE-SCSS-END *****************************************
 
 //? ************************************* FOOTER-SCSS-START *****************************************
 

@@ -9,18 +9,17 @@ import { Link } from 'react-router-dom';
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
-
 function MyNavbar() {
-    // const [userRequest, setUserRequest] = useState("none");
 
-    // const displayControl = () => {
-    //     if (userRequest == "none") {
-    //         setUserRequest("block");
-    //     }
-    //     else{
-    //         setUserRequest("none")
-    //     }
-    // }
+    const displayControl = () => {
+        let divo = document.querySelector(".request-info");
+        
+        if (divo.style.display === "none") {
+            divo.style.setProperty('display', 'block', 'important');
+        } else {
+            divo.style.setProperty('display', 'none', 'important');
+        }
+    }
 
     return (
         <>
@@ -40,9 +39,9 @@ function MyNavbar() {
                         </Nav>
                         <button className='basket-btn'><FontAwesomeIcon className='basket-btn me-4' icon={faBasketShopping} size="2xl" /></button>
                         <div className='user-request'>
-                            <button className='user-btn'><FontAwesomeIcon className='user-btn me-2' icon={faUser} size="2xl" /></button>
+                            <button className='user-btn' onClick={displayControl}><FontAwesomeIcon className='user-btn me-2' icon={faUser} size="2xl" /></button>
                             <div className='request-info d-flex justify-content-center'>
-                                <form className='user-form d-flex flex-column mt-4'>
+                                <form className='user-form m-auto d-flex flex-column mt-4'>
                                     <div className='d-flex justify-content-between mt-2 mb-2'>
                                         <label for='username'>Username</label>
                                         <input type='text' id='username' name='username'></input>
